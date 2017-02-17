@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "aobd3",
+    "name": "Another One Bites the Dust Redux",
+    "description": "Dust ALL THE ORES! Redux",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [
+      "ganymedes01",
+      "JoshWoo70"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
