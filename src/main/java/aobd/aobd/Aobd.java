@@ -1,5 +1,6 @@
 package aobd.aobd;
 
+import aobd.aobd.Misc.aobdTab;
 import aobd.aobd.libs.Config;
 import aobd.aobd.Proxy.CommonProxy;
 import aobd.aobd.aobditems.aobditems;
@@ -22,19 +23,19 @@ public class Aobd {
             clientSide = "aobd.aobd.Proxy.ClientProxy"
     )
     public static CommonProxy proxy;
+    public static final aobdTab aobdTab = new aobdTab();
     public static Configuration configFile;
     public static final String MOD_ID = "aobd";
     public static final String MOD_NAME = "Another One Bites the Dust";
     public static final String VERSION = "3.0";
     @EventHandler
     public void  Preinit(FMLPreInitializationEvent event) {
-
         configFile = new Configuration(event.getSuggestedConfigurationFile());
         Config.syncConfig();
-        aobditems.init();
+
     }
     @EventHandler
     public void init(FMLInitializationEvent event) {
-
+        aobditems.init();
     }
 }

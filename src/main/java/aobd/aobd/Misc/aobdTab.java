@@ -8,9 +8,9 @@ import net.minecraft.item.Item;
 /**
  * CreativeTabs Nuff said
  */
-public class CreativeTab extends CreativeTabs {
+public class aobdTab extends CreativeTabs {
 
-    public CreativeTab() {
+    public aobdTab() {
         super(Aobd.MOD_ID);
         setBackgroundImageName("item_search.png");
     }
@@ -18,5 +18,9 @@ public class CreativeTab extends CreativeTabs {
     @Override
     public Item getTabIconItem() {
         return aobditems.dust;
+    }
+    @Override
+    public boolean hasSearchBar() {
+        return true;
     }
 }
