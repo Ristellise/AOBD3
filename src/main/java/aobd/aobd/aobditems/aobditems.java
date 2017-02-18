@@ -3,6 +3,7 @@ package aobd.aobd.aobditems;
 import aobd.aobd.Base.ItemBase;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 public class aobditems {
     public static ItemBase dust;
@@ -15,6 +16,7 @@ public class aobditems {
 
         if (item instanceof ItemBase) {
             ((ItemBase)item).registerItemModel();
+            ((ItemBase)item).getColorFromItemstack(itemstack,int);
         }
 
         return item;

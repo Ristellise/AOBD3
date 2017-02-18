@@ -1,4 +1,4 @@
-package aobd.aobd.Misc;
+package aobd.aobd.libs;
 
 import net.minecraftforge.fml.common.FMLLog;
 import org.apache.logging.log4j.LogManager;

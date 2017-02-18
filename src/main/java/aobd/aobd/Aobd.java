@@ -1,6 +1,7 @@
 package aobd.aobd;
 
-import aobd.aobd.Misc.Config;
+import aobd.aobd.libs.Config;
+import aobd.aobd.Proxy.CommonProxy;
 import aobd.aobd.aobditems.aobditems;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +21,7 @@ public class Aobd {
             serverSide = "aobd.aobd.Proxy.CommonProxy",
             clientSide = "aobd.aobd.Proxy.ClientProxy"
     )
-
+    public static CommonProxy proxy;
     public static Configuration configFile;
     public static final String MOD_ID = "aobd";
     public static final String MOD_NAME = "Another One Bites the Dust";

@@ -1,8 +1,8 @@
 package aobd.aobd.Proxy;
 
 import aobd.aobd.Aobd;
-import aobd.aobd.Misc.Config;
-import aobd.aobd.Misc.Utils;
+import aobd.aobd.libs.Config;
+import aobd.aobd.libs.Utils;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
