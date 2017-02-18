@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class aobditems {
     public static ItemBase dust;
     public static void init() {
-        Bee = register(new ItemBase("bee_script").setCreativeTab(CreativeTabs.MISC));
+        dust = register(new ItemBase("dust").setCreativeTab(CreativeTabs.MISC));
     }
 
     private static <T extends Item> T register(T item) {

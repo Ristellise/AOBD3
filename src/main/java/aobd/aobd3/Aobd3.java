@@ -19,12 +19,14 @@ public class Aobd3 {
             serverSide = "com.aobd.aobd.Proxy.CommonProxy",
             clientSide = "com.aobd.aobd.Proxy.ClientProxy"
     )
+    public static Configuration configFile;
     public static final String MOD_ID = "aobd3";
     public static final String MOD_NAME = "Another One Bites the Dust Redux";
     public static final String VERSION = "1.0";
     @EventHandler
     public void  Preinit(FMLPreInitializationEvent event) {
-        Configuration configFile = new Configuration(event.getSuggestedConfigurationFile());
+
+        configFile = new Configuration(event.getSuggestedConfigurationFile());
         Config.syncConfig();
         aobditems.init();
     }
