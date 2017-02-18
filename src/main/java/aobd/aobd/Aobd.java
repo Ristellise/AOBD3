@@ -1,7 +1,7 @@
-package aobd.aobd3;
+package aobd.aobd;
 
-import aobd.aobd3.Misc.Config;
-import aobd.aobd3.aobditems.aobditems;
+import aobd.aobd.Misc.Config;
+import aobd.aobd.aobditems.aobditems;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,19 +10,21 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(
-        modid = Aobd3.MOD_ID,
-        name = Aobd3.MOD_NAME,
-        version = Aobd3.VERSION
+        modid = Aobd.MOD_ID,
+        name = Aobd.MOD_NAME,
+        version = Aobd.VERSION,
+        dependencies = "required-after:Forge@[10.13.4.1558,);after:*"
 )
-public class Aobd3 {
+public class Aobd {
     @SidedProxy(
-            serverSide = "com.aobd.aobd.Proxy.CommonProxy",
-            clientSide = "com.aobd.aobd.Proxy.ClientProxy"
+            serverSide = "aobd.aobd.Proxy.CommonProxy",
+            clientSide = "aobd.aobd.Proxy.ClientProxy"
     )
+
     public static Configuration configFile;
-    public static final String MOD_ID = "aobd3";
-    public static final String MOD_NAME = "Another One Bites the Dust Redux";
-    public static final String VERSION = "1.0";
+    public static final String MOD_ID = "aobd";
+    public static final String MOD_NAME = "Another One Bites the Dust";
+    public static final String VERSION = "3.0";
     @EventHandler
     public void  Preinit(FMLPreInitializationEvent event) {
 

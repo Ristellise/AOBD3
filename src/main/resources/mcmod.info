@@ -1,8 +1,8 @@
 [
   {
-    "modid": "aobd3",
-    "name": "Another One Bites the Dust Redux",
-    "description": "Dust ALL THE ORES! Redux",
+    "modid": "aobd",
+    "name": "Another One Bites the Dust",
+    "description": "Process ALL the ores!",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
@@ -11,9 +11,8 @@
       "ganymedes01",
       "JoshWoo70"
     ],
-    "credits": "",
+    "credits": "BluSunrize for his rainbow cluster texture and Inap for convincing BluSunrize to let me use it ;D, also Dylan4Ever for the old dust textures",
     "logoFile": "",
-    "screenshots": [],
-    "dependencies": []
+    "screenshots": []
   }
 ]

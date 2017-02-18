@@ -1,4 +1,4 @@
-package aobd.aobd3.Ores;
+package aobd.aobd.Ores;
 import net.minecraftforge.oredict.OreDictionary;
 /**
  * Created by joshw on 17/2/2017.

@@ -1,13 +1,12 @@
-package aobd.aobd3.Misc;
+package aobd.aobd.Misc;
 
 import net.minecraftforge.fml.common.FMLLog;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
 public class Utils {
-    private static Logger logger = LogManager.getLogger("JWCore");
+    private static Logger logger = LogManager.getLogger("aobd");
     public static void Logger(int Level,Object message){
         if (Level == 0) {
             //Severe Logging

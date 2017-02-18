@@ -1,6 +1,6 @@
-package aobd.aobd3.aobditems;
+package aobd.aobd.aobditems;
 
-import aobd.aobd3.Base.ItemBase;
+import aobd.aobd.Base.ItemBase;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;

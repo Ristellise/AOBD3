@@ -1,10 +1,7 @@
-package aobd.aobd3.Base;
+package aobd.aobd.Base;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-/**
- * Created by joshw on 11/2/2017.
- */
 public class ItemBase extends Item {
     protected String name;
     public ItemBase(String name) {
