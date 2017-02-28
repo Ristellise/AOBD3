@@ -1,9 +1,11 @@
 package aobd.aobd;
 
 import aobd.aobd.Misc.aobdTab;
+import aobd.aobd.Proxy.ClientProxy;
 import aobd.aobd.libs.Config;
 import aobd.aobd.Proxy.CommonProxy;
 import aobd.aobd.aobditems.aobditems;
+import aobd.aobd.libs.Utils;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -30,9 +32,12 @@ public class Aobd {
     public static final String VERSION = "3.0";
     @EventHandler
     public void  Preinit(FMLPreInitializationEvent event) {
+        Utils.Logger(2,"Config start!");
         configFile = new Configuration(event.getSuggestedConfigurationFile());
         Config.syncConfig();
-
+        Utils.Logger(2,"Config Done,ColorHandlers Start!");
+        proxy.registerColorsHandlers();
+        Utils.Logger(2,"ColorHandlers Done");
     }
     @EventHandler
     public void init(FMLInitializationEvent event) {
