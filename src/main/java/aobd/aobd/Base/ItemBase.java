@@ -4,7 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class ItemBase extends Item implements IItemColor {
+public class ItemBase extends Item {
     protected String name;
     public ItemBase(String name) {
         this.name = name;
@@ -20,10 +20,4 @@ public class ItemBase extends Item implements IItemColor {
         return this;
     }
 
-    @Override
-    public int getColorFromItemstack(ItemStack stack, int tintIndex) {
-        if (tintIndex == 0) {
-
-        }
-    }
 }

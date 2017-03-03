@@ -1,7 +1,8 @@
 package aobd.aobd;
 
+import aobd.aobd.Misc.WittyText;
+import aobd.aobd.ModSearch.IMCSearch;
 import aobd.aobd.Misc.aobdTab;
-import aobd.aobd.Proxy.ClientProxy;
 import aobd.aobd.libs.Config;
 import aobd.aobd.Proxy.CommonProxy;
 import aobd.aobd.aobditems.aobditems;
@@ -11,7 +12,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import java.util.Random;
 
 @Mod(
         modid = Aobd.MOD_ID,
@@ -31,16 +35,24 @@ public class Aobd {
     public static final String MOD_NAME = "Another One Bites the Dust";
     public static final String VERSION = "3.0";
     @EventHandler
-    public void  Preinit(FMLPreInitializationEvent event) {
-        Utils.Logger(2,"Config start!");
+    public void Preinit(FMLPreInitializationEvent event) {
         configFile = new Configuration(event.getSuggestedConfigurationFile());
         Config.syncConfig();
-        Utils.Logger(2,"Config Done,ColorHandlers Start!");
+        if (Config.EnableWitty) {
+            WittyText.ILikeToPopulateThings();
+            Random r = new Random();
+            Utils.Logger(2, WittyText.Wittytext[r.nextInt(WittyText.Wittytext.length)]);
+        }
         proxy.registerColorsHandlers();
-        Utils.Logger(2,"ColorHandlers Done");
+        Utils.Logger(2,"PreInit Finished!");
     }
     @EventHandler
     public void init(FMLInitializationEvent event) {
         aobditems.init();
+    }
+    @EventHandler
+    public void Postinit(FMLPostInitializationEvent event) {
+        Utils.Logger(2,"Searching For ModSearch Mods...");
+        IMCSearch.init();
     }
 }
