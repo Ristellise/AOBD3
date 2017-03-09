@@ -39,6 +39,7 @@ repositories {
 
 dependencies {
     compile "com.enderio:EnderIO:1.10.2-3.1.172:api"
+    runtime "com.enderio:EnderIO:1.10.2-3.1.172:dev"
 }
 
 processResources {

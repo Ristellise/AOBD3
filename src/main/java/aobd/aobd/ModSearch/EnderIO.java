@@ -7,6 +7,6 @@ import net.minecraftforge.fml.common.event.FMLInterModComms;
  */
 public class EnderIO {
     public static void registernewSagMillRecipe(Item) {
-        //FMLInterModComms.IMCMessage()
+        FMLInterModComms.sendMessage("EnderIO","recipe:sagmill","")
     }
 }
