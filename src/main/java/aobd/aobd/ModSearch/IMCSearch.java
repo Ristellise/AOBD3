@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.Loader;
 public class IMCSearch {
     public static void init() {
         if (Loader.isModLoaded("EnderIO")) {
-            EnderIO.registernewSagMillRecipe()
         }
 
     }

@@ -3,6 +3,7 @@ package aobd.aobd;
 import aobd.aobd.Misc.WittyText;
 import aobd.aobd.ModSearch.IMCSearch;
 import aobd.aobd.Misc.aobdTab;
+import aobd.aobd.Ores.OreDict;
 import aobd.aobd.libs.Config;
 import aobd.aobd.Proxy.CommonProxy;
 import aobd.aobd.aobditems.aobditems;
@@ -14,7 +15,9 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.oredict.OreDictionary;
 
+import java.util.Arrays;
 import java.util.Random;
 
 @Mod(
@@ -49,6 +52,9 @@ public class Aobd {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         aobditems.init();
+        if (Config.DebugMode) {
+            Utils.Logger(2, "OreNames: " + Arrays.toString(OreDictionary.getOreNames()));
+        }
     }
     @EventHandler
     public void Postinit(FMLPostInitializationEvent event) {

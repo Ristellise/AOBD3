@@ -24,7 +24,7 @@ public class ClientProxy extends CommonProxy {
         }
 
     }
-    @SideOnly(Side.CLIENT)
+    @Override
     public void registerColorsHandlers()
     {
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler(
@@ -36,6 +36,6 @@ public class ClientProxy extends CommonProxy {
                         }
                         return 0xFFFFFF;
                     }
-                }, Item.getItemFromBlock(Block.getBlockFromItem(aobditems.dust)));
+                }, aobditems.dust);
     }
 }
