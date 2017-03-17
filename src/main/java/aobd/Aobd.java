@@ -1,6 +1,5 @@
 package aobd;
 
-import aobd.Misc.WittyText;
 import aobd.ModSearch.IMCSearch;
 import aobd.Misc.aobdTab;
 import aobd.libs.Config;
@@ -17,7 +16,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Arrays;
-import java.util.Random;
 
 @Mod(
         modid = Aobd.MOD_ID,
@@ -40,18 +38,13 @@ public class Aobd {
     public void Preinit(FMLPreInitializationEvent event) {
         configFile = new Configuration(event.getSuggestedConfigurationFile());
         Config.syncConfig();
-        if (Config.EnableWitty) {
-            WittyText.ILikeToPopulateThings();
-            Random r = new Random();
-            Utils.Logger(2, WittyText.Wittytext[r.nextInt(WittyText.Wittytext.length)]);
-        }
+        Utils.Logger(2, "Sync Config Done.");
         aobditems.init();
         proxy.registerColorsHandlers();
         Utils.Logger(2,"PreInit Finished!");
     }
     @EventHandler
     public void init(FMLInitializationEvent event) {
-
 
         if (Config.DebugMode) {
             Utils.Logger(2, "OreNames: " + Arrays.toString(OreDictionary.getOreNames()));
