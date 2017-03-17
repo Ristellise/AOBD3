@@ -1,7 +1,7 @@
-package aobd.aobd.Misc;
+package aobd.Misc;
 
-import aobd.aobd.Aobd;
-import aobd.aobd.aobditems.aobditems;
+import aobd.Aobd;
+import aobd.aobditems.aobditems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 

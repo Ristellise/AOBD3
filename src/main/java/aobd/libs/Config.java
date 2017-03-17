@@ -1,9 +1,9 @@
-package aobd.aobd.libs;
+package aobd.libs;
 
-import aobd.aobd.Aobd;
+import aobd.Aobd;
 import net.minecraftforge.common.config.Configuration;
 
-import static aobd.aobd.Aobd.configFile;
+import static aobd.Aobd.configFile;
 
 /**
  * Does Config Stuff For the mod. moved out of main class for less cluster.

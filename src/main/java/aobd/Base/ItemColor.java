@@ -1,4 +1,4 @@
-package aobd.aobd.Base;
+package aobd.Base;
 
 /**
  * Created by joshw on 3/3/2017.

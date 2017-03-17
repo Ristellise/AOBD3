@@ -1,7 +1,5 @@
-package aobd.aobd.Ores;
+package aobd.Ores;
 import net.minecraftforge.oredict.OreDictionary;
-
-import java.util.List;
 
 /**
  * Created by joshw on 17/2/2017.

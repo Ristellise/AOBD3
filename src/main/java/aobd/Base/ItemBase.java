@@ -1,8 +1,6 @@
-package aobd.aobd.Base;
-import net.minecraft.client.renderer.color.IItemColor;
+package aobd.Base;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 
 public class ItemBase extends Item {
     protected String name;

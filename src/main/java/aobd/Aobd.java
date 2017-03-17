@@ -1,13 +1,12 @@
-package aobd.aobd;
+package aobd;
 
-import aobd.aobd.Misc.WittyText;
-import aobd.aobd.ModSearch.IMCSearch;
-import aobd.aobd.Misc.aobdTab;
-import aobd.aobd.Ores.OreDict;
-import aobd.aobd.libs.Config;
-import aobd.aobd.Proxy.CommonProxy;
-import aobd.aobd.aobditems.aobditems;
-import aobd.aobd.libs.Utils;
+import aobd.Misc.WittyText;
+import aobd.ModSearch.IMCSearch;
+import aobd.Misc.aobdTab;
+import aobd.libs.Config;
+import aobd.Proxy.CommonProxy;
+import aobd.aobditems.aobditems;
+import aobd.libs.Utils;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -28,8 +27,8 @@ import java.util.Random;
 )
 public class Aobd {
     @SidedProxy(
-            serverSide = "aobd.aobd.Proxy.CommonProxy",
-            clientSide = "aobd.aobd.Proxy.ClientProxy"
+            serverSide = "aobd.Proxy.CommonProxy",
+            clientSide = "aobd.Proxy.ClientProxy"
     )
     public static CommonProxy proxy;
     public static final aobdTab aobdTab = new aobdTab();
@@ -46,12 +45,14 @@ public class Aobd {
             Random r = new Random();
             Utils.Logger(2, WittyText.Wittytext[r.nextInt(WittyText.Wittytext.length)]);
         }
+        aobditems.init();
         proxy.registerColorsHandlers();
         Utils.Logger(2,"PreInit Finished!");
     }
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        aobditems.init();
+
+
         if (Config.DebugMode) {
             Utils.Logger(2, "OreNames: " + Arrays.toString(OreDictionary.getOreNames()));
         }

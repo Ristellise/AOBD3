@@ -1,7 +1,7 @@
-package aobd.aobd.aobditems;
+package aobd.aobditems;
 
-import aobd.aobd.Aobd;
-import aobd.aobd.Base.ItemBase;
+import aobd.Aobd;
+import aobd.Base.ItemBase;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 public class aobditems {

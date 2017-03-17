@@ -1,4 +1,4 @@
-package aobd.aobd.Proxy;
+package aobd.Proxy;
 
 import net.minecraft.item.Item;
 

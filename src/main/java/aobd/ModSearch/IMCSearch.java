@@ -1,4 +1,4 @@
-package aobd.aobd.ModSearch;
+package aobd.ModSearch;
 
 import net.minecraftforge.fml.common.Loader;
 

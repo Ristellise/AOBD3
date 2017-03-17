@@ -1,10 +1,9 @@
-package aobd.aobd.Proxy;
+package aobd.Proxy;
 
-import aobd.aobd.Aobd;
-import aobd.aobd.aobditems.aobditems;
-import aobd.aobd.libs.Config;
-import aobd.aobd.libs.Utils;
-import net.minecraft.block.Block;
+import aobd.Aobd;
+import aobd.aobditems.aobditems;
+import aobd.libs.Config;
+import aobd.libs.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.color.IItemColor;

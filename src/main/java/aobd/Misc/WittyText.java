@@ -1,4 +1,4 @@
-package aobd.aobd.Misc;
+package aobd.Misc;
 
 /**
  * Created by joshw on 3/3/2017.
