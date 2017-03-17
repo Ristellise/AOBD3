@@ -6,6 +6,6 @@ import net.minecraftforge.oredict.OreDictionary;
  */
 public class OreDict {
 
-    public void filterOreDict() {
+    public void filteroreDict() {
     }
 }

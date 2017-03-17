@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Utils {
     private static Logger logger = LogManager.getLogger("aobd");
-    public static void Logger(int Level,Object message){
+    public static void Logger(final int Level, final Object message){
         if (Level == 0) {
             //Severe Logging
             logger.fatal(message);
