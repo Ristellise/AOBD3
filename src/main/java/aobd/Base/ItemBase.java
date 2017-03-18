@@ -4,16 +4,16 @@ import net.minecraft.item.Item;
 
 public class ItemBase extends Item {
     protected String name;
-    public ItemBase(final String name) {
+    public ItemBase(String name) {
         this.name = name;
-        this.setUnlocalizedName(name);
-        this.setRegistryName(name);
+        setUnlocalizedName(name);
+        setRegistryName(name);
     }
     public void registerItemModel() {
 
     }
     @Override
-    public ItemBase setCreativeTab(final CreativeTabs tab) {
+    public ItemBase setCreativeTab(CreativeTabs tab) {
         super.setCreativeTab(tab);
         return this;
     }

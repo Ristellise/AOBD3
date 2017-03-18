@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ClientProxy extends CommonProxy {
     @SideOnly(Side.CLIENT)
-    public void registerItemRenderer(final Item item, final int meta, final String id) {
+    public void registerItemRenderer(Item item, int meta, String id) {
         ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(Aobd.MOD_ID + ":" + id, "inventory"));
         if (Config.DebugMode) {
             Utils.Logger(2,"Item: " + item + " meta: " + meta + "id: " + id);
@@ -29,7 +29,7 @@ public class ClientProxy extends CommonProxy {
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler(
                 new IItemColor() {
                     @Override
-                    public int getColorFromItemstack(final ItemStack stack, final int tintIndex) {
+                    public int getColorFromItemstack(ItemStack stack, int tintIndex) {
                         if (tintIndex == 1) {
                             return EnumDyeColor.byDyeDamage(stack.getMetadata()).getMapColor().colorValue;
                         }

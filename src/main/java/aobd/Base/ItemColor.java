@@ -5,7 +5,7 @@ package aobd.Base;
  */
 public class ItemColor extends ItemBase implements IHasColor {
 
-    public ItemColor(final String name) {
+    public ItemColor(String name) {
         super(name);
     }
 }

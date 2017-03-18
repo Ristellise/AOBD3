@@ -7,10 +7,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class aobditems {
     public static ItemBase dust;
     public static void init() {
-        aobditems.dust = aobditems.register(dust.setCreativeTab(Aobd.aobdTab));
+        dust = register(aobditems.dust.setCreativeTab(Aobd.aobdTab));
     }
 
-    private static <T extends Item> T register(final T item) {
+    private static <T extends Item> T register(T item) {
         GameRegistry.register(item);
 
         if (item instanceof ItemBase) {

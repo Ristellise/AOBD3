@@ -6,19 +6,19 @@ import org.apache.logging.log4j.Logger;
 
 
 public class Utils {
-    private static Logger logger = LogManager.getLogger("aobd");
-    public static void Logger(final int Level, final Object message){
+    private static final Logger logger = LogManager.getLogger("aobd");
+    public static void Logger(int Level, Object message){
         if (Level == 0) {
             //Severe Logging
-            logger.fatal(message);
+          Utils.logger.fatal(message);
         }
         else if (Level == 1) {
             //Warning
-            logger.warn(message);
+          Utils.logger.warn(message);
         }
         else if (Level == 2) {
             //info
-            logger.info(message);
+          Utils.logger.info(message);
         }
         else {
             //Not in the range

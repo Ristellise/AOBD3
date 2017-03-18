@@ -12,7 +12,7 @@ public class aobdTab extends CreativeTabs {
 
     public aobdTab() {
         super(Aobd.MOD_ID);
-      this.setBackgroundImageName("item_search.png");
+      setBackgroundImageName("item_search.png");
     }
 
     @Override

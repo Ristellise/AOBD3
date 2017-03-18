@@ -6,9 +6,9 @@ import aobd.libs.Config;
 import aobd.Proxy.CommonProxy;
 import aobd.aobditems.aobditems;
 import aobd.libs.Utils;
+import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -34,24 +34,25 @@ public class Aobd {
     public static final String MOD_ID = "aobd";
     public static final String MOD_NAME = "Another One Bites the Dust";
     public static final String VERSION = "3.0";
-    @EventHandler
+    @Mod.EventHandler
     public void Preinit(final FMLPreInitializationEvent event) {
-        configFile = new Configuration(event.getSuggestedConfigurationFile());
+        final File suggestedConfigurationFile = event.getSuggestedConfigurationFile();
+        configFile = new Configuration(suggestedConfigurationFile);
         Config.syncConfig();
         Utils.Logger(2, "Sync Config Done.");
         aobditems.init();
         proxy.registerColorsHandlers();
         Utils.Logger(2,"PreInit Finished!");
     }
-    @EventHandler
-    public void init(final FMLInitializationEvent event) {
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
 
         if (Config.DebugMode) {
             Utils.Logger(2, "OreNames: " + Arrays.toString(OreDictionary.getOreNames()));
         }
     }
-    @EventHandler
-    public void Postinit(final FMLPostInitializationEvent event) {
+    @Mod.EventHandler
+    public void Postinit(FMLPostInitializationEvent event) {
         Utils.Logger(2,"Searching For ModSearch Mods...");
         IMCSearch.init();
     }
