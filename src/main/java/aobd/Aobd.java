@@ -42,12 +42,12 @@ public class Aobd {
         Config.syncConfig();
         Utils.Logger(2, "Sync Config Done.");
         aobditems.init();
-        proxy.registerColorsHandlers();
+
         Utils.Logger(2,"PreInit Finished.");
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        proxy.registerColorsHandlers();
         if (Config.DebugMode) {
             String[] oreNames = OreDictionary.getOreNames();
             String OreNamed = Arrays.toString(oreNames);
