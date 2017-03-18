@@ -4,6 +4,7 @@ import aobd.Aobd;
 import aobd.aobditems.aobditems;
 import aobd.libs.Config;
 import aobd.libs.Utils;
+import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.color.IItemColor;
@@ -24,11 +25,13 @@ public class ClientProxy extends CommonProxy {
 
     }
     @Override
+    @SideOnly(Side.CLIENT)
     public void registerColorsHandlers()
     {
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler(
                 new IItemColor() {
                     @Override
+                    @ParametersAreNonnullByDefault
                     public int getColorFromItemstack(ItemStack stack, int tintIndex) {
                         if (tintIndex == 1) {
                             return EnumDyeColor.byDyeDamage(stack.getMetadata()).getMapColor().colorValue;

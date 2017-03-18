@@ -17,6 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.Arrays;
 
+@SuppressWarnings("ALL")
 @Mod(
         modid = Aobd.MOD_ID,
         name = Aobd.MOD_NAME,
@@ -35,20 +36,22 @@ public class Aobd {
     public static final String MOD_NAME = "Another One Bites the Dust";
     public static final String VERSION = "3.0";
     @Mod.EventHandler
-    public void Preinit(final FMLPreInitializationEvent event) {
-        final File suggestedConfigurationFile = event.getSuggestedConfigurationFile();
+    public void Preinit(FMLPreInitializationEvent event) {
+        File suggestedConfigurationFile = event.getSuggestedConfigurationFile();
         configFile = new Configuration(suggestedConfigurationFile);
         Config.syncConfig();
         Utils.Logger(2, "Sync Config Done.");
         aobditems.init();
         proxy.registerColorsHandlers();
-        Utils.Logger(2,"PreInit Finished!");
+        Utils.Logger(2,"PreInit Finished.");
     }
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
         if (Config.DebugMode) {
-            Utils.Logger(2, "OreNames: " + Arrays.toString(OreDictionary.getOreNames()));
+            String[] oreNames = OreDictionary.getOreNames();
+            String OreNamed = Arrays.toString(oreNames);
+            Utils.Logger(2, "OreNames: " + OreNamed);
         }
     }
     @Mod.EventHandler

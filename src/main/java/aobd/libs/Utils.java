@@ -10,15 +10,15 @@ public class Utils {
     public static void Logger(int Level, Object message){
         if (Level == 0) {
             //Severe Logging
-          Utils.logger.fatal(message);
+          logger.fatal(message);
         }
         else if (Level == 1) {
             //Warning
-          Utils.logger.warn(message);
+          logger.warn(message);
         }
         else if (Level == 2) {
             //info
-          Utils.logger.info(message);
+          logger.info(message);
         }
         else {
             //Not in the range
