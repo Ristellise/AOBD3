@@ -1,7 +1,7 @@
 package aobd;
 
-import aobd.ModSearch.IMCSearch;
 import aobd.Misc.aobdTab;
+import aobd.Ores.OreDict;
 import aobd.libs.Config;
 import aobd.Proxy.CommonProxy;
 import aobd.aobditems.aobditems;
@@ -53,10 +53,10 @@ public class Aobd {
             String OreNamed = Arrays.toString(oreNames);
             Utils.Logger(2, "OreNames: " + OreNamed);
         }
+        OreDict.init();
     }
     @Mod.EventHandler
     public void Postinit(FMLPostInitializationEvent event) {
         Utils.Logger(2,"Searching For ModSearch Mods...");
-        IMCSearch.init();
     }
 }

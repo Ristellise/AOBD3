@@ -1,48 +1,48 @@
 # Metals
-metal.aobd.heeendium.name=Endium
-metal.aobd.elntungsten.name=Tungsten
+metal.heeendium.name=Endium
+metal.elntungsten.name=Tungsten
 
 # Items
-item.aobd.dust.name=%s Dust
-item.aobd.crushed.name=Crushed %s Ore
-item.aobd.crushedPurified.name=Purified Crushed %s Ore
-item.aobd.dustTiny.name=Tiny Pile of %s Dust
-item.aobd.cluster.name=Native %s Cluster
-item.aobd.dirtyGravel.name=Dirty %s Gravel
-item.aobd.cleanGravel.name=Clean %s Gravel
-item.aobd.reduced.name=Reduced %s Chunks
-item.aobd.crystalline.name=Crystalline %s
-item.aobd.clump.name=%s Clump
-item.aobd.shard.name=%s Shard
-item.aobd.dustDirty.name=Dirty %s Dust
-item.aobd.crystal.name=%s Crystal
-item.aobd.chunk.name=%s Chunk
-item.aobd.nugget.name=%s Nugget
-item.aobd.ore.name=%s Ore
-item.aobd.ground.name=Ground %s Ore
-item.aobd.dustImpure.name=Impure %s Dust
-item.aobd.rubble.name=%s Rubble
-item.aobd.pebbles.name=%s Pebbles
-item.aobd.oreBroken.name=Broken %s Ore
-item.aobd.oreNetherBroken.name=Broken %s Ore
-item.aobd.oreCrushed.name=Crushed %s Ore
-item.aobd.orePowdered.name=Powdered %s Ore
-item.aobd.glassBottle.name=%s Bottle
+item.dust.name=%s Dust
+item.crushed.name=Crushed %s Ore
+item.crushedPurified.name=Purified Crushed %s Ore
+item.dustTiny.name=Tiny Pile of %s Dust
+item.cluster.name=Native %s Cluster
+item.dirtyGravel.name=Dirty %s Gravel
+item.cleanGravel.name=Clean %s Gravel
+item.reduced.name=Reduced %s Chunks
+item.crystalline.name=Crystalline %s
+item.clump.name=%s Clump
+item.shard.name=%s Shard
+item.dustDirty.name=Dirty %s Dust
+item.crystal.name=%s Crystal
+item.chunk.name=%s Chunk
+item.nugget.name=%s Nugget
+item.ore.name=%s Ore
+item.ground.name=Ground %s Ore
+item.dustImpure.name=Impure %s Dust
+item.rubble.name=%s Rubble
+item.pebbles.name=%s Pebbles
+item.oreBroken.name=Broken %s Ore
+item.oreNetherBroken.name=Broken %s Ore
+item.oreCrushed.name=Crushed %s Ore
+item.orePowdered.name=Powdered %s Ore
+item.glassBottle.name=%s Bottle
 
 # Blocks
-tile.aobd.block.name=%s Block
-tile.aobd.oreDust.name=%s Ore Dust
-tile.aobd.oreSand.name=%s Ore Sand
-tile.aobd.oreGravel.name=%s Ore Gravel
-tile.aobd.oreNetherGravel.name=%s Ore Gravel
+tile.block.name=%s Block
+tile.oreDust.name=%s Ore Dust
+tile.oreSand.name=%s Ore Sand
+tile.oreGravel.name=%s Ore Gravel
+tile.oreNetherGravel.name=%s Ore Gravel
 
 # Fluids
-fluid.aobd.moltenMetal.name=Molten %s
+fluid.moltenMetal.name=Molten %s
 
 # Gases
-gas.aobd.clean.name=Clean %s Slurry
-gas.aobd.dirty.name=%s Slurry
-gas.aobd.ore.name=%s Ore
+gas.clean.name=Clean %s Slurry
+gas.dirty.name=%s Slurry
+gas.ore.name=%s Ore
 
 # Creative Tab
 itemGroup.aobd=AOBD

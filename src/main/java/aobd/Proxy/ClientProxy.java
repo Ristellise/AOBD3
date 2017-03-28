@@ -4,10 +4,12 @@ import aobd.Aobd;
 import aobd.aobditems.aobditems;
 import aobd.libs.Config;
 import aobd.libs.Utils;
+import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.color.IItemColor;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -26,8 +28,7 @@ public class ClientProxy extends CommonProxy {
     }
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerColorsHandlers()
-    {
+    public void registerColorsHandlers() {
         Minecraft.getMinecraft().getItemColors().registerItemColorHandler(
                 new IItemColor() {
                     @Override
@@ -40,4 +41,5 @@ public class ClientProxy extends CommonProxy {
                     }
                 }, aobditems.dust);
     }
+
 }

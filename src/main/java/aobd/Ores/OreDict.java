@@ -1,12 +1,18 @@
 package aobd.Ores;
+import java.util.ArrayList;
+import java.util.List;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
- * Created by joshw on 17/2/2017.
+ * Searches For ores in oredictionary
  */
 public class OreDict {
-
-    public void filteroreDict() {
+    private static List<String> OreNames = new ArrayList<String>();
+    public static void init() {
+        OreNames.add("ore");
+        filterOreDict();
+    }
+    public static void filterOreDict() {
 
     }
 }
